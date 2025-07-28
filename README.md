@@ -57,3 +57,6 @@ Observações
 -  Certifique-se de que o back esteja rodando na mesma porta (7199).
 Se estiver diferente, atualize o valor de apiUrl.
 - O CRUD de usuários só é acessível após login.
+- Login de teste inserido via banco:
+- usuario: admin@admin.com
+- senha: admin
