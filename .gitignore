@@ -1,0 +1,10 @@
+# .gitignore - Visual Studio + .NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.vsidx
+*.dbmdl
+*.log
+*.cache

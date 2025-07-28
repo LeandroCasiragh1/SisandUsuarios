@@ -1,0 +1,63 @@
+<div
+  class="min-vh-100 d-flex align-items-center justify-content-center bg-light"
+>
+  <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px">
+    <h4 class="text-center mb-4">Bem-vindo!</h4>
+
+    <form #form="ngForm" (ngSubmit)="login(form)" novalidate>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': tentouLogar && emailControl.invalid }"
+          [(ngModel)]="email"
+          name="email"
+          #emailControl="ngModel"
+          id="email"
+          placeholder="Digite seu email..."
+          maxlength="100"
+          required
+        />
+        <div
+          *ngIf="tentouLogar && emailControl.invalid"
+          class="invalid-feedback"
+        >
+          Digite um email válido.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input
+          type="password"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': tentouLogar && senhaControl.invalid }"
+          [(ngModel)]="senha"
+          name="senha"
+          #senhaControl="ngModel"
+          id="senha"
+          placeholder="Digite sua senha..."
+          maxlength="255"
+          required
+        />
+        <div
+          *ngIf="tentouLogar && senhaControl.invalid"
+          class="invalid-feedback"
+        >
+          Digite sua senha.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Entrar</button>
+
+      <div
+        *ngIf="mensagemErro"
+        class="alert alert-danger mt-3 text-center"
+        role="alert"
+      >
+        {{ mensagemErro }}
+      </div>
+    </form>
+  </div>
+</div>

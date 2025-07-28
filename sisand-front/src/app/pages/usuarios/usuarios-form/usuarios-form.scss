@@ -1,0 +1,48 @@
+.toggle-password {
+  position: absolute;
+  top: 45%;
+  right: 17px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
+  z-index: 2;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+i {
+  font-size: 0.9rem;
+}
+
+.toggle-password:hover {
+  color: #343a40;
+}
+
+.email-container {
+  position: relative;
+}
+
+.text-danger {
+  position: absolute;
+  font-size: 0.75rem;
+  margin-top: 2px;
+  color: #dc3545;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}
